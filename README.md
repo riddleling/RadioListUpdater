@@ -1,8 +1,8 @@
 # RadioListUpdater
 
-這是 [CRadio](https://github.com/riddleling/cradio) 的電台列表更新程式，主要是會抓取 `台北愛樂電台` 與 `港都電台` 的串流 URL，並加到 `list.json` 裡，如果 `list.json` 裡已有這兩個電台，則會更新串流 URL。
+這是 [CRadio](https://github.com/riddleling/cradio) 的電台列表更新程式，主要是會抓取`台北愛樂電台`與`港都電台`的串流 URL，並加到 `list.json` 裡，如果 `list.json` 裡已有這兩個電台，則會更新串流 URL。
 
-註：因為`台北愛樂電台` 與 `港都電台` 的串流 URL 包含隨機生成的「Token」以及「有效時間」，所以使用此程式更新串流 URL。
+註：因為`台北愛樂電台`與`港都電台`的串流 URL 包含隨機生成的「Token」以及「有效時間」，所以使用此程式更新串流 URL。
 
 
 ## 系統需求
