@@ -27,15 +27,39 @@
 
 ## 下載執行檔 (Windows)
 
-從 GitHub Releases 頁面下載 `RadioListUpdater.exe`。
+從 [GitHub Releases](https://github.com/riddleling/RadioListUpdater/releases) 頁面下載 `RadioListUpdater.exe`。
 
 ## 執行 RadioListUpdater
 
-執行 `RadioListUpdater.exe`。
+把執行檔 `RadioListUpdater.exe` 放到 CRadio 目錄下 (裡頭有 `list.json`)，然後執行 `RadioListUpdater.exe` 就會更新電台列表 。
 
-## 從原始碼編譯與執行
+## 從原始碼編譯
 
+```
+git clone https://github.com/riddleling/RadioListUpdater.git
+cd RadioListUpdater
+go mod tidy
+go build
+```
 
+## 建立 .bat 檔案
+
+我執行的流程是先執行 `RadioListUpdater.exe` 更新電台列表，然後再執行 `cradio.exe` 來播放電台，所以可以寫一個 `run_cradio.bat` 來執行此流程：
+
+run_cradio.bat 內容：
+
+```
+@echo off
+cd /d "%~dp0"
+
+RadioListUpdater.exe || exit /b
+
+timeout /t 1 /nobreak >nul
+
+cradio.exe
+```
+
+以後要用 `CRadio` 播放電台，都直接執行這個 .bat 檔案即可。
 
 
 ## License
