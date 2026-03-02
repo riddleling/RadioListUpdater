@@ -42,6 +42,8 @@ go mod tidy
 go build
 ```
 
+中國大陸地區如果編譯遇到超時問題，請參考 [issue #1](https://github.com/riddleling/RadioListUpdater/issues/1) 處理。
+
 ## 建立 .bat 檔案
 
 我執行的流程是先執行 `RadioListUpdater.exe` 更新電台列表，然後再執行 `cradio.exe` 來播放電台，所以可以寫一個 `run_cradio.bat` 來執行此流程：
